@@ -213,12 +213,11 @@ function doWhile(numero) {
   //Usar el bucle do ... while.
   var j = 0
   var i = numero
-
   do {
     i = i + 5;
-    j = j++;
-  } while (j < 9) { 
-      console.log(i);
+    j = j + 1;
+  } while (j <= 7) { 
+      return i;
   }
 }
 
