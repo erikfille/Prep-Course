@@ -169,18 +169,18 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   if (numero < 2){
-    return 'falso';
+    return false;
   }
-  else if (numero === 2){
-    return true
+  if (numero === 2){
+    return true;
   }
   for (var i = 2; i < numero ; i++){
     if (numero % i === 0){
-      return 'falso'; 
+      return false; 
     }
+  }
     return true;
   }
-}
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
@@ -199,7 +199,7 @@ function tablaDelSeis(){
   let tabla = []
   for (var i = 0 ; i <= 10 ; i++){
     n = i * 6
-    var agregar = tabla.push(n);
+    tabla.push(n);
   }
   return tabla
 }
