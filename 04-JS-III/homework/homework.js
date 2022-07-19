@@ -3,21 +3,21 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-  console.log(array[0])
+  return array[0]
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  console.log(array[array.lenght - 1])
+  return array[(array.length) - 1]
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-  console.log(array.lenght)
+  return array.length
 }
 
 
@@ -26,11 +26,7 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  for (var i = 0; i < array.lenght ; i++){
-    if (array[i] === Number.isinteger){
-      console.log(array[i + 1]);
-    }
-  }  
+  return array.map(num => num + 1)
 }
 
 
@@ -38,8 +34,9 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array.push(elemento);
-}
+  var agregar = array.push(elemento)
+  return agregar;
+  }
 
 
 function agregarItemAlComienzoDelArray(array, elemento) {
@@ -47,7 +44,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  array.unshift(elemento)
+  array.unshift(elemento);
+  console.log(array)
 }
 
 
@@ -57,11 +55,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  for (var i = 0; i = palabras.length; i++)
-  if (palabras[i] % 2 == 0){
-    palabras.push(' ');
-    console.log(i)
-  }
+  
 }
 
 
@@ -69,6 +63,10 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  if (array.includes(elemento)) {
+    return true;
+  }
+  return false;
 }
 
 
@@ -76,6 +74,9 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  var array = array.from(numeros);
+  var suma = array.reduce()
+  console.log(suma)
 }
 
 
@@ -97,13 +98,22 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  let n = 1;
+  if (arguments.length === 0){
+    return 0;
+  }
+  for (let i=0; i < arguments.length; i++) {
+    n *= arguments[i];
+  }
+  return n;
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  var filtrado = arreglo.filter(num => num <= 18)
+  console.log(filtrado)
 }
 
 

@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const { arrayReplaceAt } = require("markdown-it/lib/common/utils");
+
 function obtenerMayor(x, y) {
   // "x" e "y" son números enteros (int).
   // Devuelve el número más grande
@@ -166,12 +168,15 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  if (numero <= 1){
-    return false;
+  if (numero < 2){
+    return 'falso';
   }
-  for (var i = 2; i <= numero - 1 ; i++){
+  else if (numero === 2){
+    return true
+  }
+  for (var i = 2; i < numero ; i++){
     if (numero % i === 0){
-      return false; 
+      return 'falso'; 
     }
     return true;
   }
@@ -190,13 +195,15 @@ function esVerdadero(valor){
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
-  for (var i = 0 ; i <= 60 ; i++){
-    if (i % 6 == 0){
-      console.log(i);
-    }
+  //Escribe tu código aquí
+  let tabla = []
+  for (var i = 0 ; i <= 10 ; i++){
+    n = i * 6
+    var agregar = tabla.push(n);
   }
+  return tabla
 }
+
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
