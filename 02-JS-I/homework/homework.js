@@ -67,12 +67,18 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código: 
-  var longitud1 = str1.length;
-  var longitud2 = str2.length;
-  if (longitud1 == longitud2) {
-      return true;
-  }
-    return false;
+  // var longitud1 = str1.length;
+  // var longitud2 = str2.length;
+  // if (longitud1 == longitud2) {
+  //     return true;
+  // }
+  //   return false;
+  // if (str1.length === str2.length){
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+  return str1.length === str2.length
 }
 
 
@@ -172,14 +178,16 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  return nombre + ' ' + apellido;
+  // return nombre + ' ' + apellido;
+  return `${nombre} ${apellido}`
 }
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return 'Hola ' + nombre + '!';
+  // return 'Hola ' + nombre + '!';
+  return `Hola ${nombre}!`
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -221,26 +229,29 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  var longitud = letra.length
-  if (longitud > 1){
-    return 'Dato incorrecto'
-  }
-  if (letra == 'a') {
-    return 'Es vocal';
-  }
-  if (letra == 'e') {
-    return 'Es vocal';
-  }
-  if (letra == 'i') {
-    return 'Es vocal';
-  }
-  if (letra == 'o') {
-    return 'Es vocal';
-  }
-  if (letra == 'u') {
-    return 'Es vocal';
-  }
-  return 'Dato incorrecto';
+  // var longitud = letra.length
+  // if (longitud > 1){
+  //   return 'Dato incorrecto'
+  // }
+  // if (letra == 'a') {
+  //   return 'Es vocal';
+  // }
+  // if (letra == 'e') {
+  //   return 'Es vocal';
+  // }
+  // if (letra == 'i') {
+  //   return 'Es vocal';
+  // }
+  // if (letra == 'o') {
+  //   return 'Es vocal';
+  // }
+  // if (letra == 'u') {
+  //   return 'Es vocal';
+  // }
+  // return 'Dato incorrecto';
+  if (letra.length < 1) return 'Dato incorrecto';
+  if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') return 'Es vocal';
+  else return 'Dato incorrecto';
 }
 
 
